@@ -1,0 +1,558 @@
+:root {
+    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+      "Source Han Sans CN", sans-serif;
+  }
+  
+  .main-container {
+    overflow: hidden;
+  }
+  body {
+    font-family: 'Cairo', sans-serif;
+  }
+  .main-container,
+  .main-container * {
+    box-sizing: border-box;
+  }
+  
+  input,
+  select,
+  textarea,
+  button {
+    outline: 0;
+  }
+  
+  .main-container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 50px;
+    position: relative;
+    width: 800px; /* تغيير من 559px */
+    margin: 0 auto;
+    background: rgba(25, 25, 25, 0);
+}
+
+.page {
+    flex-shrink: 0;
+    position: relative;
+    width: 800px; /* تغيير من 559px */
+    height: 1130px; /* تغيير من 785px */
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.page-1 {
+    position: absolute;
+    height: 1130px; /* تغيير من 785px */
+    top: 0;
+    right: 0;
+    left: 0;
+    background: #ffffff;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.frame-2 {
+    position: absolute;
+    height: 1130px; /* تغيير من 785px */
+    top: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0);
+    z-index: 2;
+    overflow: hidden;
+}
+
+.frame-3 {
+    position: absolute;
+    height: 1130px; /* تغيير من 785px */
+    top: 0;
+    right: -0.47px;
+    left: 0;
+    background: rgba(0, 0, 0, 0);
+    z-index: 3;
+    overflow: hidden;
+}
+
+.groups {
+  position: absolute;
+  width: 100%; /* تغيير من القيمة الثابتة لتصبح نسبية */
+  height: 100%; /* تغيير من القيمة الثابتة */
+  top: 0; /* تعديل من -6.228px */
+  left: 0;
+  background: url(https://static.codia.ai/custom_image/2025-04-03/204518/background-pattern.svg) no-repeat center;
+  background-size: cover;
+  z-index: 4;
+}
+
+.flex-column-b {
+  position: absolute;
+  height: auto; /* تغيير من القيمة الثابتة */
+  /* تعديل من 1px */
+  right: 20px; /* تعديل من 0.47px */
+  left: 20px; 
+  bottom: 20px;
+  top: 20px;/* تعديل من 3px */
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* لتوسيط المحتوى */
+}
+
+.m {
+    position: relative;
+    width: 797px; /* تغيير من 556px */
+    height: 250px; /* تغيير من 197px */
+    margin: 0 0 0 0;
+   
+    z-index: 90;
+}
+
+.frame-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* تغيير من flex-start */
+  justify-content: center;
+  position: relative;
+  width: 100%; /* تعديل من 100% */
+  height: 500px; /* تعديل من القيمة الثابتة */
+  margin: 20px auto;
+   /* تعديل الهوامش */
+  z-index: 22;
+}
+
+
+.frame-17 {
+  position: relative;
+  width: 750px; /* تغيير من 556px */
+  height: 283px; /* تغيير من 197px */
+  margin: 0 0 0 0;
+  
+  z-index: 90;
+}
+.medical-report-ar {
+  position: relative; /* تغيير من absolute */
+  width: 760px; /* تعديل من 770px */
+  max-width: 800px; /* تحديد أقصى عرض */
+  height: 400px; /* تعديل من القيمة الثابتة */
+  margin: 20px auto; /* توسيط الجدول */
+  z-index: 40;
+  border-collapse: collapse;
+  font-family: 'Cairo', sans-serif;
+  font-size: 14px; /* زيادة حجم الخط */
+  direction: rtl;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+  
+  .medical-report-ar th {
+    background-color: #366fb5;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .medical-report-ar td {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+  }
+  
+  .medical-report-ar tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  .medical-report-ar tr:nth-child(2){
+    background-color: #366fb5;
+    color: white;
+  }
+  .medical-report-ar td:nth-child(1) {
+   
+   color: #366FB5;
+   text-align: center;
+  }
+  .medical-report-ar td:nth-child(2) {
+   text-align: center;
+   color: #2C3E77;
+   
+  }
+  
+  .medical-report-ar td:nth-child(3) {
+   text-align: center;
+   color: #2C3E77;
+    
+  }
+  .medical-report-ar td:nth-child(4) {
+   text-align: center;
+   color: #366FB5; 
+  }
+  
+  .groups-18 {
+    position: relative;
+    width: 187px; /* كان 131.061px */
+    height: 132px; /* كان 92.306px */
+    margin: -6.5px 0 0 -3.1px; /* تعديل الهوامش */
+    z-index: 9;
+  }
+  
+  .image-19 {
+    position: absolute;
+    width: 187px; /* كان 131.061px */
+    height: 132px;
+    top: 0;
+    left: 0;
+    background: url(https://static.codia.ai/custom_image/2025-04-03/204518/signature-image.png)
+      no-repeat center;
+    background-size: cover;
+    z-index: 10;
+  }
+  .vector-1a {
+    position: absolute;
+    width: 181px; /* كان 126.523px */
+    height: 126px; /* كان 88.017px */
+    top: 846px; /* كان 591.772px */
+    left: 548px;
+    background: url(https://static.codia.ai/custom_image/2025-04-03/204518/signature-border.svg)
+      no-repeat center;
+    background-size: cover;
+    z-index: 19;
+  }
+  .groups-1b {
+    position: absolute;
+    width: 121px; /* كان 84.555px */
+    height: 57px; 
+    top: 1006px; /* كان 703.895px */
+    left: 588px;
+    z-index: 5;
+    -webkit-mask-image: url(https://static.codia.ai/custom_image/2025-04-03/204518/stamp-mask.png);
+    -webkit-mask-size: cover;
+  }
+  .groups-1c {
+    position: absolute;
+    width: 121px; /* كان 84.555px */
+    height: 57px; 
+    top: 0;
+    left: 0;
+    z-index: 6;
+  }
+  .image-1d {
+    position: absolute;
+    width: 121px; /* كان 84.555px */
+    height: 57px; 
+    top: 0;
+    left: 0;
+    background: url(https://static.codia.ai/custom_image/2025-04-03/204518/stamp-image.png)
+      no-repeat center;
+    background-size: cover;
+    z-index: 7;
+  }
+  .vector-1e {
+    position: absolute;
+   
+    width: 121px; /* كان 84.555px */
+    height: 57px; 
+    top: 1006px; /* كان 703.895px */
+    left: 588px;
+    background: url(https://static.codia.ai/custom_image/2025-04-03/204518/stamp-border.svg)
+      no-repeat center;
+    background-size: cover;
+    z-index: 18;
+  }
+  .flex-column-df {
+    position: absolute;
+    width: 276px; /* كان 193.068px */
+    height: 269px; /* كان 187.903px */
+    top: 804px; /* كان 562.094px */
+    left: 73px; 
+    z-index: 21;
+  }
+  .groups-1f {
+    position: relative;
+    width: 149px; /* كان 104px */
+    height: 27px; /* كان 19.093px */
+    margin: 241px 0 0 12px;
+    font-size: 0px;
+    z-index: 15;
+    overflow: visible auto;
+  }
+  .am {
+    display: block;
+    position: relative;
+    height: 5px;
+    margin: 0 0 0 0;
+    color: #000000;
+    font-family: Inter, var(--default-font-family);
+    font-size: 7.53000020980835px;
+    font-size: 10.8px; /* كان 7.53px */
+    line-height: 7px; 
+    text-align: left;
+    white-space: nowrap;
+    z-index: 17;
+  }
+  .thursday-march {
+    display: block;
+    position: relative;
+    height: 5px;
+    margin: 9.093px 0 0 0;
+    color: #000000;
+    font-family: Inter, var(--default-font-family);
+    font-size: 7.53000020980835px;
+    font-size: 10.8px; /* كان 7.53px */
+    line-height: 7px; 
+    text-align: left;
+    white-space: nowrap;
+    z-index: 16;
+  }
+  .groups-20 {
+    position: absolute;
+    width: 89px; /* كان 62.007px */
+    height: 89px; /* كان 62.007px */
+    left: 79px;
+    top: 0;
+   
+    z-index: 13;
+  }
+  .image-21 {
+    position: absolute;
+    width: 89px; /* كان 62.007px */
+    height: 89px; /* كان 62.007px */
+    left: 79px;
+    top: 0;
+   
+    background: url(https://static.codia.ai/custom_image/2025-04-03/204518/logo-image.png)
+      no-repeat center;
+    background-size: cover;
+    z-index: 14;
+  }
+  .groups-22 {
+    position: absolute;
+    width: 276px; /* كان 192.865px */
+    height: 166px;
+    top: 0.34px;
+    left: 0;
+    background: url(https://static.codia.ai/custom_image/2025-04-03/204518/hospital-info-background.svg)
+      no-repeat center;
+    background-size: cover;
+    z-index: 21;
+  }
+  .groups-23 {
+    position: absolute;
+    width: 276px; /* كان 193.068px */
+    height: 80px; /* كان 55.665px */
+    top: 87px;
+    left: 0;
+    z-index: 11;
+  }
+  .image-24 {
+    position: absolute;
+    width: 276px; /* كان 193.068px */
+    height: 80px; /* كان 55.665px */
+    top: 87px;
+    left: 0;
+    background: url(https://static.codia.ai/custom_image/2025-04-03/204518/hospital-name-background.png)
+      no-repeat center;
+    background-size: cover;
+    z-index: 12;
+  }
+  .vector-25 {
+    position: absolute;
+    width: 2px; /* كان 1.411px */
+    height: 115px; /* كان 80.63px */
+    top: 835px; /* كان 583.997px */
+    left: 398px;
+    background: url(https://static.codia.ai/custom_image/2025-04-03/204518/vertical-divider.svg)
+      no-repeat center;
+    background-size: cover;
+    z-index: 20;
+  }
+  .parent-container {
+    position: relative;
+    width: 100%;
+    bottom: -20px;
+  }
+  
+  .frame-17 {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+  }
+  
+  .container {
+    position: absolute;
+    bottom: 30px; /* يمكن تعديلها حسب الحاجة */
+    right: 40px; /* العنصر ملتصق باليمين */
+    width: 200.83px;
+    height: 200px;
+    z-index: 100;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* محاذاة العناصر لليمين */
+  }
+  
+  .image-container {
+    position: relative;
+    height: 87.73px;
+    z-index: 101;
+    margin-left: auto; /* لمحاذاة لليمين */
+  }
+  
+  .image-wrapper {
+    position: relative;
+    width: 131.061px;
+    height: 92.306px;
+    margin: -4.577px 0 0 -2.17px;
+    z-index: 102;
+  }
+  
+  .main-image {
+    position: absolute;
+    width: 150.061px;
+    height: 92.306px;
+    z-index: 105;
+    right: 80px; /* محاذاة لليمين */
+  }
+  
+  .background-vector {
+    position: relative;
+    width: 126.523px;
+    height: 88.017px;
+    z-index: 103;
+    margin-left: auto; /* محاذاة لليمين */
+  }
+  
+  .logo-container {
+    position: relative;
+    width: 200.555px;
+    height: 100.164px;
+    z-index: 104;
+    margin-left: auto; /* محاذاة لليمين */
+  }
+  
+  .logo-wrapper {
+    position: absolute;
+    width: 150.555px;
+    height: 50.164px;
+    z-index: 106;
+    right: 60px; /* محاذاة لليمين */
+  }
+  
+  .logo-image {
+    position: absolute;
+    width: 90.555px;
+    height: 45.164px;
+    z-index: 107;
+    right: 90; /* محاذاة لليمين */
+  }
+  
+  .overlay-vector {
+    position: relative;
+    width: 84.626px;
+    height: 40.198px;
+    z-index: 108;
+    margin-left: auto; /* محاذاة لليمين */
+    background: url(https://static.codia.ai/custom_image/2025-04-04/172617/vector-overlay.svg) no-repeat center;
+    background-size: contain;
+  }
+  .form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+  }
+
+  h1 {
+    color: #366fb5;
+    text-align: center;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2C3E77;
+  }
+  input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Cairo';
+  }
+
+  button {
+    background-color: #366fb5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Cairo';
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  button:hover {
+    background-color: #2C3E77;
+  }
+
+  .hidden {
+    display: none;
+  }
+  @media print {
+    body, html {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
+    
+    .main-container, 
+    .page, 
+    .page-1, 
+    .frame-2, 
+    .frame-3, 
+    .flex-column-b {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+      height: auto !important;
+      position: static !important;
+      box-shadow: none !important;
+    }
+    
+    .medical-report-ar {
+      width: 95% !important;
+      margin: 0 auto !important;
+      font-size: 12px !important;
+      page-break-inside: avoid;
+    }
+    
+    .frame-4 {
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    
+    .report-footer, 
+    button {
+      display: none !important;
+    }
+    
+    @page {
+      size: auto;  /* auto هو الحجم الحقيقي للصفحة */
+      margin: 0mm; /* إزالة الهوامش من جميع الجوانب */
+    }
+  }

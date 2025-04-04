@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نظام التقرير الطبي</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+
+
+
+</head>
+
+<body>
+  <!-- صفحة إدخال البيانات -->
+  <div id="data-entry" class="form-container">
+    <h1>إدخال بيانات التقرير الطبي</h1>
+
+    <div class="form-group">
+      <label for="leave-id">رمز الإجازة / Leave ID</label>
+      <input type="text" id="leave-id" required>
+    </div>
+
+    <div class="form-group">
+      <label for="leave-duration-ar">مدة الإجازة (عربي)</label>
+      <input type="text" id="leave-duration-ar" placeholder="مثال: 4 يوم (23-08-1446 إلى 26-08-1446)" required>
+    </div>
+
+    <div class="form-group">
+      <label for="leave-duration-en">Leave Duration (English)</label>
+      <input type="text" id="leave-duration-en" placeholder="Example: 4 day (23-02-2025 to 26-02-2025)" required>
+    </div>
+
+    <div class="form-group">
+      <label for="admission-date-ar">تاريخ الدخول (هجري)</label>
+      <input type="text" id="admission-date-ar" placeholder="مثال: 23-08-1446" required>
+    </div>
+
+    <div class="form-group">
+      <label for="admission-date-en">Admission Date (Gregorian)</label>
+      <input type="text" id="admission-date-en" placeholder="Example: 23-02-2025" required>
+    </div>
+
+    <div class="form-group">
+      <label for="discharge-date-ar">تاريخ الخروج (هجري)</label>
+      <input type="text" id="discharge-date-ar" placeholder="مثال: 23-08-1446" required>
+    </div>
+
+    <div class="form-group">
+      <label for="discharge-date-en">Discharge Date (Gregorian)</label>
+      <input type="text" id="discharge-date-en" placeholder="Example: 23-02-2025" required>
+    </div>
+
+    <div class="form-group">
+      <label for="issue-date">تاريخ اصدار التقرير</label>
+      <input type="text" id="issue-date" placeholder="مثال: 23-02-2025" required>
+    </div>
+
+    <div class="form-group">
+      <label for="patient-name-ar">الاسم (عربي)</label>
+      <input type="text" id="patient-name-ar" placeholder="أثير ناصر احمد كعبي" required>
+    </div>
+
+    <div class="form-group">
+      <label for="patient-name-en">Name (English)</label>
+      <input type="text" id="patient-name-en" placeholder="ATHEER NASSER AHMED KAABI" required>
+    </div>
+
+    <div class="form-group">
+      <label for="national-id">رقم الهوية/الإقامة</label>
+      <input type="text" id="national-id" placeholder="1112031917" required>
+    </div>
+
+    <div class="form-group">
+      <label for="nationality-ar">الجنسية (عربي)</label>
+      <input type="text" id="nationality-ar" placeholder="السعودية" required>
+    </div>
+
+    <div class="form-group">
+      <label for="nationality-en">Nationality (English)</label>
+      <input type="text" id="nationality-en" placeholder="Saudi Arabia" required>
+    </div>
+
+    <div class="form-group">
+      <label for="employer">جهة العمل</label>
+      <input type="text" id="employer" placeholder="جامعة طيبة" required>
+    </div>
+
+    <div class="form-group">
+      <label for="physician-name-ar">اسم الطبيب المعالج (عربي)</label>
+      <input type="text" id="physician-name-ar" placeholder="وضاح تحسين الحاج نعيمه" required>
+    </div>
+
+    <div class="form-group">
+      <label for="physician-name-en">Physician Name (English)</label>
+      <input type="text" id="physician-name-en" placeholder="WADDAH TAHSEEN ALHAJ NAEIMA" required>
+    </div>
+
+    <div class="form-group">
+      <label for="position-ar">المسمى الوظيفي (عربي)</label>
+      <input type="text" id="position-ar" placeholder="نائب" required>
+    </div>
+
+    <div class="form-group">
+      <label for="position-en">Position (English)</label>
+      <input type="text" id="position-en" placeholder="Registrar" required>
+    </div>
+
+
+    <button id="generate-report">إنشاء التقرير</button>
+  </div>
+
+  <!-- صفحة التقرير النهائي -->
+  <div id="report-display" class="hidden">
+    <div class="main-container">
+      <div class="page">
+        <div class="page-1">
+          <div class="frame-2">
+            <div class="frame-3">
+              <div class="groups"></div>
+              <div class="flex-column-b">
+                <img class="m" src="images/m.png" alt="m" /> <!-- الصورة الثابتة -->
+                <div class="frame-4">
+                  <div class="groups-5">
+                    <div class="groups-6">
+                      <table class="medical-report-ar" id="report-table">
+                        <!-- سيتم ملء الجدول بالبيانات المدخلة -->
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="parent-container">
+                  <div class="container">
+                    <div class="image-container">
+                      <div class="image-wrapper">
+                        <img class="main-image" src="images/o.png" alt="medical-report" /> <!-- الصورة الثابتة -->
+                      </div>
+                    </div>
+                    <div class="background-vector"></div>
+                    <div class="logo-container">
+                      <div class="logo-wrapper">
+                        <img class="logo-image" src="images/t.png" alt="logo" /> <!-- الصورة الثابتة -->
+                      </div>
+                    </div>
+                    <div class="overlay-vector"></div>
+                  </div>
+                  <img src="images/s.png" alt="" class="frame-17"> <!-- الصورة الثابتة -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="report-footer">
+      <button id="download-pdf">حفظ كـ PDF</button>
+      <button id="back-to-edit">العودة للتعديل</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script>
+    // عرض معاينة الصور عند رفعها
+
+
+
+
+
+    // إنشاء التقرير
+    document.getElementById('generate-report').addEventListener('click', function () {
+      // جمع البيانات من النموذج
+      const formData = {
+        leaveId: document.getElementById('leave-id').value,
+        leaveDurationAr: document.getElementById('leave-duration-ar').value,
+        leaveDurationEn: document.getElementById('leave-duration-en').value,
+        admissionDateAr: document.getElementById('admission-date-ar').value,
+        admissionDateEn: document.getElementById('admission-date-en').value,
+        dischargeDateAr: document.getElementById('discharge-date-ar').value,
+        dischargeDateEn: document.getElementById('discharge-date-en').value,
+        issueDate: document.getElementById('issue-date').value,
+        patientNameAr: document.getElementById('patient-name-ar').value,
+        patientNameEn: document.getElementById('patient-name-en').value,
+        nationalId: document.getElementById('national-id').value,
+        nationalityAr: document.getElementById('nationality-ar').value,
+        nationalityEn: document.getElementById('nationality-en').value,
+        employer: document.getElementById('employer').value,
+        physicianNameAr: document.getElementById('physician-name-ar').value,
+        physicianNameEn: document.getElementById('physician-name-en').value,
+        positionAr: document.getElementById('position-ar').value,
+        positionEn: document.getElementById('position-en').value
+      };
+
+      // عرض الصور المرفوعة
+
+
+      // ملء الجدول بالبيانات
+      const tableHtml = `
+        <tr>
+          <td class="ar-cell">رمز الإجازة</td>
+          <td class="en-cell" colspan="2" style="text-align:center;">${formData.leaveId}</td>
+          <td class="ar-cell" style="text-align:centert;color:#366FB5;">Leave ID</td>
+        </tr>
+        <tr>
+          <td class="ar-cell" style="color:white;">مدة الإجازة</td>
+          <td class="en-cell date" style="color:white;">${formData.leaveDurationAr}</td>
+          <td class="en-cell date" style="color:white;">${formData.leaveDurationEn}</td>
+          <td class="ar-cell" style="color:white;">Leave Duration</td>
+        </tr>
+        <tr>
+          <td class="ar-cell">تاريخ الدخول</td>
+          <td class="en-cell date">${formData.admissionDateAr}</td>
+          <td class="en-cell date">${formData.admissionDateEn}</td>
+          <td class="ar-cell">Admission Date</td>
+        </tr>
+        <tr>
+          <td class="ar-cell">تاريخ الخروج</td>
+          <td class="en-cell date">${formData.dischargeDateAr}</td>
+          <td class="en-cell date">${formData.dischargeDateEn}</td>
+          <td class="ar-cell">Discharge Date</td>
+        </tr>
+        <tr>
+          <td class="ar-cell">تاريخ اصدار التقرير</td>
+          <td class="en-cell date" colspan="2">${formData.issueDate}</td>
+          <td class="ar-cell" style="text-align:center;color:#366FB5;">Issue Date</td>
+        </tr>
+        <tr>
+          <td class="ar-cell">الاسم</td>
+          <td class="en-cell">${formData.patientNameAr}</td>
+          <td class="en-cell">${formData.patientNameEn}</td>
+          <td class="ar-cell">Name</td>
+        </tr>
+        <tr>
+          <td class="ar-cell">رقم الهوية/الإقامة</td>
+          <td class="en-cell" colspan="2">${formData.nationalId}</td>
+          <td class="ar-cell" style="text-align:center;color:#366FB5;">National ID/Iqama</td>
+        </tr>
+        <tr>
+          <td class="ar-cell">الجنسية</td>
+          <td class="en-cell">${formData.nationalityAr}</td>
+          <td class="en-cell">${formData.nationalityEn}</td>
+          <td class="ar-cell">Nationality</td>
+        </tr>
+        <tr>
+          <td class="ar-cell">جهة العمل</td>
+          <td class="empty-cell">${formData.employer}</td>
+          <td class="empty-cell"></td>
+          <td class="ar-cell">Employer</td>
+        </tr>
+        <tr>
+          <td class="ar-cell">اسم الطبيب المعالج</td>
+          <td class="en-cell">${formData.physicianNameAr}</td>
+          <td class="en-cell">${formData.physicianNameEn}</td>
+          <td class="ar-cell">Physician Name</td>
+        </tr>
+        <tr>
+          <td class="ar-cell">المسمى الوظيفي</td>
+          <td class="en-cell">${formData.positionAr}</td>
+          <td class="en-cell">${formData.positionEn}</td>
+          <td class="ar-cell">Position</td>
+        </tr>
+      `;
+
+      document.getElementById('report-table').innerHTML = tableHtml;
+
+      // عرض التقرير وإخفاء النموذج
+      document.getElementById('data-entry').classList.add('hidden');
+      document.getElementById('report-display').classList.remove('hidden');
+    });
+
+    // العودة إلى نموذج التعديل
+    document.getElementById('back-to-edit').addEventListener('click', function () {
+      document.getElementById('report-display').classList.add('hidden');
+      document.getElementById('data-entry').classList.remove('hidden');
+    });
+
+    // تحويل إلى PDF
+    document.getElementById('download-pdf').addEventListener('click', function () {
+      const element = document.querySelector('.main-container');
+      const opt = {
+        margin: 0, // هوامش صفرية
+        html2canvas: {
+          scale: 2,
+          useCORS: true,
+          scrollX: 0,
+          scrollY: 0,
+          windowWidth: document.documentElement.scrollWidth
+        },
+        jsPDF: {
+          unit: 'mm',
+          format: 'a4',
+          orientation: 'portrait',
+          compress: true
+        },
+        pagebreak: { mode: 'avoid-all' }
+      };
+
+      // إخفاء أزرار التحكم قبل الطباعة
+      document.querySelector('.report-footer').style.display = 'none';
+
+      html2pdf().set(opt).from(element).save().then(() => {
+        // إعادة عرض أزرار التحكم بعد الانتهاء
+        document.querySelector('.report-footer').style.display = 'block';
+      });
+    });
+  </script>
+</body>
+
+</html>
